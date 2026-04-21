@@ -1,4 +1,5 @@
 # Complete Dockerfile - compiles server inside Linux container
+# v2 - fixed dockerignore to include server_example_files
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 # Install build tools
@@ -9,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     git \
     && rm -rf /var/lib/apt/lists/*
 
-# Build libiec61850
+# Build libiec61850 - copy all source files including examples
 COPY libiec61850_full/ /build/libiec61850_full/
 WORKDIR /build/libiec61850_full
 RUN mkdir -p build && cd build && \
