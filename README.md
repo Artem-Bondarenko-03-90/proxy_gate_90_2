@@ -95,3 +95,4 @@ proxy_gate_90_2/
 MIT
 # Test deployment
 # Test deployment with server IP
+# Test deployment with SSH key
