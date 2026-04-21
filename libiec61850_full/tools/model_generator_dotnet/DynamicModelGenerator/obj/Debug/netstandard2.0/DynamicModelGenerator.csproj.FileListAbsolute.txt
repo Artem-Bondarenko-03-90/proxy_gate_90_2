@@ -1,0 +1,13 @@
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\bin\Debug\netstandard2.0\DynamicModelGenerator.deps.json
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\bin\Debug\netstandard2.0\DynamicModelGenerator.dll
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\bin\Debug\netstandard2.0\DynamicModelGenerator.pdb
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\bin\Debug\netstandard2.0\SCLParser.dll
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\bin\Debug\netstandard2.0\SCLParser.pdb
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.csproj.AssemblyReference.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.GeneratedMSBuildEditorConfig.editorconfig
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.AssemblyInfoInputs.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.AssemblyInfo.cs
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.csproj.CoreCompileInputs.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicM.1D5DDDB4.Up2Date
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.dll
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\DynamicModelGenerator\obj\Debug\netstandard2.0\DynamicModelGenerator.pdb

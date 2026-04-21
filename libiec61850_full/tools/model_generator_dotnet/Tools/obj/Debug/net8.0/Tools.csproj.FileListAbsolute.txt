@@ -1,0 +1,5 @@
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\Tools\obj\Debug\net8.0\Tools.csproj.AssemblyReference.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\Tools\obj\Debug\net8.0\Tools.GeneratedMSBuildEditorConfig.editorconfig
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\Tools\obj\Debug\net8.0\Tools.AssemblyInfoInputs.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\Tools\obj\Debug\net8.0\Tools.AssemblyInfo.cs
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\Tools\obj\Debug\net8.0\Tools.csproj.CoreCompileInputs.cache

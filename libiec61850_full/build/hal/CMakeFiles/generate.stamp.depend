@@ -1,0 +1,4 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-4.3/Modules/TestBigEndian.cmake
+F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/hal/CMakeLists.txt

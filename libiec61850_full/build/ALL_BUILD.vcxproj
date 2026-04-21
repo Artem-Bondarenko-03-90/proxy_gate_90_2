@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{578F598D-0106-3872-9AEF-86387FC612A5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCXXCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeRCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeSystem.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\config\stack_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCXXCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeRCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeSystem.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\config\stack_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCXXCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeRCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeSystem.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\config\stack_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\InstallRequiredSystemLibraries.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCXXLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CMakeCommonLinkerInformation.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Linker\MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Linker\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-4.3\Templates\CPackConfig.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeCXXCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeRCCompiler.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\4.3.1\CMakeSystem.cmake;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\config\stack_config.h.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\ZERO_CHECK.vcxproj">
+      <Project>{73F68924-2D3F-301B-A19E-87232BE60B6E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_control\client_example_control.vcxproj">
+      <Project>{9FC78C98-ECC5-3221-803B-241B2011516C}</Project>
+      <Name>client_example_control</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_files\file-tool.vcxproj">
+      <Project>{B737A240-CA0F-3480-9E04-A1FA79CC3EE0}</Project>
+      <Name>file-tool</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.vcxproj">
+      <Project>{3A416B80-D6C9-3A78-AC0B-602EF747F6B4}</Project>
+      <Name>hal</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal-shared.vcxproj">
+      <Project>{379834E9-C4DA-316C-BC05-7FD8C7992562}</Project>
+      <Name>hal-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\iec61850.vcxproj">
+      <Project>{E6A6193F-A754-3589-9A5E-BB3F35059854}</Project>
+      <Name>iec61850</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\iec61850-shared.vcxproj">
+      <Project>{84EC2196-BAFF-36FE-9B34-EF911A76A395}</Project>
+      <Name>iec61850-shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_async\iec61850_client_async.vcxproj">
+      <Project>{A99D00D4-D4B9-3F12-944A-A73C8A03F8A6}</Project>
+      <Name>iec61850_client_async</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example1\iec61850_client_example1.vcxproj">
+      <Project>{04CA7817-211B-3F4F-9EF3-23C26380E0BC}</Project>
+      <Name>iec61850_client_example1</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example2\iec61850_client_example2.vcxproj">
+      <Project>{10BD44AF-770D-3937-8F87-9DF4D660867B}</Project>
+      <Name>iec61850_client_example2</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example4\iec61850_client_example4.vcxproj">
+      <Project>{2A959E0B-156C-3624-8CB3-49D12A60FB1F}</Project>
+      <Name>iec61850_client_example4</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example5\iec61850_client_example5.vcxproj">
+      <Project>{4C37A2D1-64A9-3567-AA78-956CD5D4637C}</Project>
+      <Name>iec61850_client_example5</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_ClientGooseControl\iec61850_client_example_ClientGooseControl.vcxproj">
+      <Project>{135CA04D-BF93-302C-892D-8FFBA454376D}</Project>
+      <Name>iec61850_client_example_ClientGooseControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_ClientGooseControlAsync\iec61850_client_example_ClientGooseControlAsync.vcxproj">
+      <Project>{C6BEE959-18B7-36E1-97AC-BDE674685D8F}</Project>
+      <Name>iec61850_client_example_ClientGooseControlAsync</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_array\iec61850_client_example_array.vcxproj">
+      <Project>{EFE9C1EC-9124-3D14-92CE-A31515C3FC8F}</Project>
+      <Name>iec61850_client_example_array</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_log\iec61850_client_example_log.vcxproj">
+      <Project>{48842301-88CE-3C5F-B811-2699C273530F}</Project>
+      <Name>iec61850_client_example_log</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_rcbAsync\iec61850_client_example_rcbAsync.vcxproj">
+      <Project>{22F1CB9C-52C8-3FD2-A1F6-6CB93A59C3E9}</Project>
+      <Name>iec61850_client_example_rcbAsync</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_example_reporting\iec61850_client_example_reporting.vcxproj">
+      <Project>{F8048E38-48C4-3E11-A5D8-C1EBAA748F4D}</Project>
+      <Name>iec61850_client_example_reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\iec61850_client_file_async\iec61850_client_file_async.vcxproj">
+      <Project>{E1273F85-4FB8-398B-A59F-6EC09E13293B}</Project>
+      <Name>iec61850_client_file_async</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_61400_25\server_example_61400_25.vcxproj">
+      <Project>{7E1D109B-1B48-3E91-8EE3-80CAFF5AA7A5}</Project>
+      <Name>server_example_61400_25</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_access_control\server_example_access_control.vcxproj">
+      <Project>{732B74FF-9A87-3E01-B28D-41A1372BEBE9}</Project>
+      <Name>server_example_access_control</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_basic_io\server_example_basic_io.vcxproj">
+      <Project>{A19AC832-FD8C-32B8-84EE-67DC06C9A10A}</Project>
+      <Name>server_example_basic_io</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_complex_array\server_example_ca.vcxproj">
+      <Project>{0519715B-1C5A-3672-A5A5-9D09F1D6F2B3}</Project>
+      <Name>server_example_ca</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_config_file\server_example_config_file.vcxproj">
+      <Project>{982E7295-B0D0-3079-AEFC-3612D657138A}</Project>
+      <Name>server_example_config_file</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_control\server_example_control.vcxproj">
+      <Project>{FBD8113B-C81C-3CFB-8ECF-296C325961E8}</Project>
+      <Name>server_example_control</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_deadband\server_example_deadband.vcxproj">
+      <Project>{BADA0B21-FD83-3E8E-A266-7DC27D9F1650}</Project>
+      <Name>server_example_deadband</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_dynamic\server_example_dynamic.vcxproj">
+      <Project>{597969CC-B3FC-3B1A-AE38-727C3E2C7BC1}</Project>
+      <Name>server_example_dynamic</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_files\server_example_files.vcxproj">
+      <Project>{91DC37A8-9649-356D-B39B-5793320F9C64}</Project>
+      <Name>server_example_files</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_password_auth\server_example_password_auth.vcxproj">
+      <Project>{EA35B432-3735-329D-8B4E-AC499C975FA0}</Project>
+      <Name>server_example_password_auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_service_tracking\server_example_service_tracking.vcxproj">
+      <Project>{59B15E08-C6D0-302C-8961-63600E4F4DF9}</Project>
+      <Name>server_example_service_tracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_setting_groups\server_example_sg.vcxproj">
+      <Project>{2BB50677-90C3-3D1F-B1E3-614E10E17031}</Project>
+      <Name>server_example_sg</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_simple\server_example_simple.vcxproj">
+      <Project>{1746979F-6056-3AC3-A9B0-553BBEC96AE1}</Project>
+      <Name>server_example_simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_substitution\server_example_substitution.vcxproj">
+      <Project>{57B4DBF7-ED04-3B73-AFE5-C9A6425EC9A5}</Project>
+      <Name>server_example_substitution</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_threadless\server_example_threadless.vcxproj">
+      <Project>{F477FC9D-C924-34D8-BC42-30D25A4558E8}</Project>
+      <Name>server_example_threadless</Name>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\examples\server_example_write_handler\server_example_write_handler.vcxproj">
+      <Project>{793CB3CA-03BA-3E9C-8637-A70120B65751}</Project>
+      <Name>server_example_write_handler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

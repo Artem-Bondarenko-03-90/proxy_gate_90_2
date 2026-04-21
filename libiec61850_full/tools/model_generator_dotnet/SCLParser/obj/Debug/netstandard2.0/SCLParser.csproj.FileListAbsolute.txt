@@ -1,0 +1,10 @@
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\bin\Debug\netstandard2.0\SCLParser.deps.json
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\bin\Debug\netstandard2.0\SCLParser.dll
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\bin\Debug\netstandard2.0\SCLParser.pdb
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.csproj.AssemblyReference.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.GeneratedMSBuildEditorConfig.editorconfig
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.AssemblyInfoInputs.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.AssemblyInfo.cs
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.csproj.CoreCompileInputs.cache
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.dll
+F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\SCLParser\obj\Debug\netstandard2.0\SCLParser.pdb

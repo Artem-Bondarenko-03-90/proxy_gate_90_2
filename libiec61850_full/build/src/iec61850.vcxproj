@@ -1,0 +1,493 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E6A6193F-A754-3589-9A5E-BB3F35059854}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>iec61850</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">iec61850.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">iec61850.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">iec61850.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">iec61850.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">iec61850</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BufferSecurityCheck></BufferSecurityCheck>
+      <CallingConvention></CallingConvention>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel></FloatingPointModel>
+      <ForceConformanceInForLoopScope></ForceConformanceInForLoopScope>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RemoveUnreferencedCodeData></RemoveUnreferencedCodeData>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;EXCLUDE_ETHERNET_WINDOWS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\config;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\goose;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sampled_values;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\r_session;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\inc_private;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\inc;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\winpcap\include;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\..\third_party\sqlite;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\exportheader.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\version.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\exportheader.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\version.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\exportheader.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\version.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full -BF:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build --check-stamp-file F:/RTSoft/Code/proxy_gate_90_2/libiec61850_full/build/src/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\GenerateExportHeader.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.3\Modules\exportheader.cmake.in;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\version.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\string_map.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\map.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\linked_list.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\byte_buffer.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\string_utilities.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\buffer_chain.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\conversions.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\mem_alloc_linked_list.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\common\simple_allocator.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_server\iso_connection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_server\iso_server.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_acse\acse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\common\mms_type_spec.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\common\mms_value.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\common\mms_common_msg.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_initiate.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_write.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_identify.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_status.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_named_variable_list.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_connection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_files.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_get_namelist.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_get_var_access.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_common.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_read.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\client\mms_client_journals.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_read_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_file_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_association_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_identify_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_status_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_named_variable_list_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_value_cache.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_get_namelist_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_access_result.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_server.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_server_common.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_named_variable_list.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_domain.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_device.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_information_report.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_journal.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_journal_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_server_connection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_write_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\server\mms_get_var_access_service.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_cotp\cotp.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_presentation\iso_presentation.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\asn1\ber_decode.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\asn1\asn1_ber_primitive_value.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\asn1\ber_encoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\asn1\ber_integer.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_client\iso_client_connection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_common\iso_connection_parameters.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_session\iso_session.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\client\client_control.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\client\client_report_control.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\client\client_goose_control.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\client\client_sv_control.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\client\client_report.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\client\ied_connection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\common\iec61850_common.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\impl\ied_server.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\impl\ied_server_config.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\impl\client_connection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\model\model.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\model\dynamic_model.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\model\cdc.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\model\config_file_parser.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\mms_mapping\control.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\mms_mapping\mms_mapping.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\mms_mapping\reporting.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\mms_mapping\mms_goose.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\mms_mapping\mms_sv.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\iec61850\server\mms_mapping\logging.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\logging\log_storage.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\DataAccessError.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\DeleteNamedVariableListRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\constr_SET_OF.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\MmsPdu.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GetNamedVariableListAttributesResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\BIT_STRING.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ber_tlv_tag.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\constr_SEQUENCE_OF.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\asn_SET_OF.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ReadResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\InformationReport.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConfirmedServiceRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\DeleteNamedVariableListResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\asn_SEQUENCE_OF.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\VariableAccessSpecification.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GetVariableAccessAttributesRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\xer_support.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ObjectName.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\NativeEnumerated.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\per_encoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\constr_SEQUENCE.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GetNameListResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\MMSString.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\InitiateErrorPdu.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\IndexRangeSeq.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConfirmedErrorPDU.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\UnconfirmedService.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\UTF8String.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ServiceError.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\TimeOfDay.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GetNameListRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\asn_codecs_prim.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Data.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ScatteredAccessDescription.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ReadRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\per_decoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Identifier.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ServiceSupportOptions.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Integer8.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConfirmedServiceResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ParameterSupportOptions.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Integer16.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ber_tlv_length.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\OCTET_STRING.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\DefineNamedVariableListRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\FloatingPoint.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\xer_encoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Unsigned8.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\BOOLEAN.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\INTEGER.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\UnconfirmedPDU.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\DataSequence.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\constraints.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\der_encoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\VisibleString.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\InitiateResponsePdu.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\StructComponent.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Address.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Unsigned16.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ber_decoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\per_support.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\WriteResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\InitRequestDetail.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\InitiateRequestPdu.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\DefineNamedVariableListResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\NULL.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ListOfVariableSeq.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\UtcTime.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConcludeResponsePDU.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\AccessResult.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Integer32.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GetNamedVariableListAttributesRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\VariableSpecification.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\Unsigned32.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\constr_CHOICE.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\AlternateAccess.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ObjectClass.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\InitResponseDetail.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConfirmedResponsePdu.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GetVariableAccessAttributesResponse.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\NativeInteger.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\xer_decoder.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\AlternateAccessSelection.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConfirmedRequestPdu.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\ConcludeRequestPDU.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\WriteRequest.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\RejectPDU.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\TypeSpecification.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\constr_TYPE.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\mms\iso_mms\asn1c\GeneralizedTime.c" />
+    <ClCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\src\sntp\sntp_client.c" />
+    <ResourceCompile Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\src\version.rc" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\ZERO_CHECK.vcxproj">
+      <Project>{73F68924-2D3F-301B-A19E-87232BE60B6E}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.vcxproj">
+      <Project>{3A416B80-D6C9-3A78-AC0B-602EF747F6B4}</Project>
+      <Name>hal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
