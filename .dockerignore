@@ -5,14 +5,18 @@ out/
 publish/
 !publish-full/
 
+# IMPORTANT: Allow libiec61850_full source files FIRST (before *.c/*.h exclusions)
+!libiec61850_full/examples/
+!libiec61850_full/tools/
+!libiec61850_full/src/
+!libiec61850_full/**/*.c
+!libiec61850_full/**/*.h
+!libiec61850_full/**/*.cmake
+
 # Windows build artifacts (critical for libiec61850_full)
 **/CMakeCache.txt
 **/CMakeFiles/
 libiec61850_full/build/
-# Allow libiec61850_full examples and tools
-!libiec61850_full/examples/
-!libiec61850_full/tools/
-!libiec61850_full/src/
 **/*.sln
 **/*.vcxproj
 **/*.vcxproj.filters
@@ -114,9 +118,7 @@ upload-cid.sh
 # Temporary files
 *.tmp
 *.log
-# *.c and *.h needed for libiec61850 compilation
-!libiec61850_full/**/*.c
-!libiec61850_full/**/*.h
+# .c/.h exclusions below - libiec61850_full already allowed above
 !static_model.h  # May be needed
 static_model.c
 
