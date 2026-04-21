@@ -1,0 +1,49 @@
+# Build artifacts
+bin/
+obj/
+out/
+**/publish/
+!publish/
+
+# Exclude Windows build artifacts (but allow libiec61850_full for Dockerfile.final)
+**/CMakeCache.txt
+**/CMakeFiles/
+# *.cmake exclusion removed - needed for libiec61850_full
+**/*.sln
+**/*.vcxproj
+# build/ exclusion removed - needed for libiec61850_full
+
+# IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Git
+.git/
+.gitignore
+
+# Test directories
+TestFileServiceApp/
+TestMultiLDClient/
+TestFileService/
+SimpleApi/
+FullApi/
+
+# Documentation
+*.md
+!README.md
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.log
+# *.cid exclusion removed - MultiLD.cid needed for runtime
+!MultiLD.cid
+
+# Exclude unnecessary files
+iec61850.dll
+iec61850dotnet.dll

@@ -1,0 +1,46 @@
+# Complete Dockerfile - compiles server inside Linux container
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+
+# Install build tools
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    cmake \
+    openjdk-17-jdk \
+    git \
+    && rm -rf /var/lib/apt/lists/*
+
+# Build libiec61850
+COPY libiec61850_full/ /build/libiec61850_full/
+WORKDIR /build/libiec61850_full
+RUN mkdir -p build && cd build && \
+    cmake -DBUILD_EXAMPLES=ON -DCMAKE_BUILD_TYPE=Debug .. && \
+    make server_example_files -j$(nproc)
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+
+RUN apt-get update && apt-get install -y \
+    openjdk-17-jre \
+    build-essential \
+    make \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+# Copy built server from build stage
+COPY --from=build /build/libiec61850_full/build/ ./libiec61850_full/build/
+COPY --from=build /build/libiec61850_full/tools/ ./libiec61850_full/tools/
+COPY --from=build /build/libiec61850_full/examples/server_example_files/ ./libiec61850_full/examples/server_example_files/
+
+# Copy FullApi
+COPY publish-full/ ./publish/
+
+# Create filestore
+RUN mkdir -p /app/libiec61850_full/build/examples/server_example_files/vmd-filestore/{Measurements,Protection,Control}
+
+EXPOSE 80 8102
+ENV ASPNETCORE_URLS=http://+:80
+ENV ASPNETCORE_ENVIRONMENT=Production
+
+ENTRYPOINT ["bash", "-c", "cd /app/libiec61850_full/build/examples/server_example_files && mkdir -p vmd-filestore/{Measurements,Protection,Control} && /app/libiec61850_full/build/examples/server_example_files/server_example_files 8102 & sleep 3 && cd /app/publish && exec dotnet FullApi.dll"]
