@@ -9,6 +9,10 @@ publish/
 **/CMakeCache.txt
 **/CMakeFiles/
 libiec61850_full/build/
+# Allow libiec61850_full examples and tools
+!libiec61850_full/examples/
+!libiec61850_full/tools/
+!libiec61850_full/src/
 **/*.sln
 **/*.vcxproj
 **/*.vcxproj.filters
@@ -110,8 +114,9 @@ upload-cid.sh
 # Temporary files
 *.tmp
 *.log
-*.c
-*.h
+# *.c and *.h needed for libiec61850 compilation
+!libiec61850_full/**/*.c
+!libiec61850_full/**/*.h
 !static_model.h  # May be needed
 static_model.c
 
