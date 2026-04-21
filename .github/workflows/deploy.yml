@@ -50,10 +50,6 @@ jobs:
           #!/bin/bash
           set -e
 
-          # Create directory if not exists
-          sudo mkdir -p /opt/iec61850-server
-          sudo chown $USER:$USER /opt/iec61850-server
-
           cd /opt/iec61850-server
 
           # Load Docker image
