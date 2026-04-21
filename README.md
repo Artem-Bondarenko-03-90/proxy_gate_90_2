@@ -96,3 +96,4 @@ MIT
 # Test deployment
 # Test deployment with server IP
 # Test deployment with SSH key
+# Final deployment test
