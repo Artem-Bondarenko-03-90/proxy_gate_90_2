@@ -93,3 +93,4 @@ proxy_gate_90_2/
 ## Лицензия
 
 MIT
+# Test deployment
