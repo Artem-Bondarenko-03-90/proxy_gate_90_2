@@ -131,9 +131,7 @@ nul
 libiec61850-win64.zip
 
 # Misc
-# server_example_files/ - needed for libiec61850_full build!
-!libiec61850_full/examples/server_example_files/
-server_example_files
+# server_example_files needed for libiec61850_full build
 server_multild_*.c
 vmd-filestore/
 
