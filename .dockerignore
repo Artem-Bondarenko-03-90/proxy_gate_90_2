@@ -5,11 +5,13 @@ out/
 publish/
 !publish-full/
 
-# Windows build artifacts
+# Windows build artifacts (critical for libiec61850_full)
 **/CMakeCache.txt
 **/CMakeFiles/
+libiec61850_full/build/
 **/*.sln
 **/*.vcxproj
+**/*.vcxproj.filters
 
 # IDE
 .vs/
