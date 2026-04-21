@@ -1,37 +1,27 @@
-# Build artifacts
-bin/
-obj/
-out/
-publish/
-!publish-full/
-
-# IMPORTANT: Allow libiec61850_full source files FIRST (before *.c/*.h exclusions)
-!libiec61850_full/examples/
-!libiec61850_full/tools/
-!libiec61850_full/src/
-!libiec61850_full/**/*.c
-!libiec61850_full/**/*.h
-!libiec61850_full/**/*.cmake
-
-# Windows build artifacts (critical for libiec61850_full)
-**/CMakeCache.txt
-**/CMakeFiles/
-libiec61850_full/build/
-**/*.sln
-**/*.vcxproj
-**/*.vcxproj.filters
-
-# IDE
-.vs/
-.vscode/
-*.user
-*.suo
-
 # Git
 .git/
 .gitignore
 
-# Test directories
+# CI/CD - keep workflows
+!.github/
+
+# Build artifacts (but not libiec61850_full)
+bin/
+obj/
+out/
+!publish-full/
+
+# Windows artifacts
+**/*.sln
+**/*.vcxproj
+**/*.vcxproj.filters
+libiec61850_full/build/
+
+# IDE
+.vs/
+.vscode/
+
+# Test projects
 TestFileServiceApp/
 TestMultiLDClient/
 TestFileService/
@@ -40,7 +30,7 @@ DockerServerApi/
 FileApiHttp/
 DotNetServer/
 
-# Old API versions
+# Old versions
 SelectLDClient.*
 FileApi.*
 FileUploadClient.*
@@ -61,31 +51,18 @@ TestFileService.*
 UpdateTest.*
 LdRegistry.*
 
-# Documentation (keep only essential)
+# Documentation - keep only essential
 *.md
 !README.md
 !WORKING_SETUP.md
 !QUICK_START.md
 !DEPLOYMENT.md
-DOCKER_GUIDE.md
-DOCKER_QUICKSTART.md
-DYNAMIC_REBUILD_GUIDE.md
-FILE_API.md
-MULTILD_HYBRID.md
-README_HTTP_API.md
-README_PROJECT.md
-STATIC_MODEL_GUIDE.md
-WORKING_DLL.md
-РУКОВОДСТВО.md
 
-# CID files (keep only MultiLD.cid)
+# Keep only MultiLD.cid
 *.cid
 !MultiLD.cid
 
-# CFG files
-*.cfg
-
-# DLL and EXE
+# Exclude binaries
 *.dll
 *.exe
 *.so
@@ -110,19 +87,11 @@ test_*.sh
 test_*.ps1
 test_*.json
 TestUploadAPI.sh
-
-# Deploy scripts (local)
 deploy-*.sh
 upload-cid.sh
 
-# Temporary files
-*.tmp
-*.log
-# .c/.h exclusions below - libiec61850_full already allowed above
-!static_model.h  # May be needed
-static_model.c
-
-# Config files
+# Configs
+*.cfg
 model.cfg
 simpleIO.cfg
 
@@ -135,18 +104,16 @@ nul
 *.zip
 *.tar
 *.tar.gz
-libiec61850-win64.zip
 
 # Misc
-# server_example_files needed for libiec61850_full build
 server_multild_*.c
 vmd-filestore/
 
-# Dockerfile variations (keep only .final)
+# Dockerfile - keep only .final
 Dockerfile
 !Dockerfile.final
 Dockerfile.full
 Dockerfile.minimal
 
-# libiec61850 (keep only _full version)
+# Keep only libiec61850_full
 libiec61850/
