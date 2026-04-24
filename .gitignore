@@ -5,6 +5,13 @@ out/
 publish/
 !publish-full/
 
+# IMPORTANT: Allow libiec61850_full source files FIRST
+!libiec61850_full/examples/
+!libiec61850_full/tools/
+!libiec61850_full/src/
+!libiec61850_full/**/*.c
+!libiec61850_full/**/*.h
+
 # Test projects and old servers (not needed in repo)
 TestFileServiceApp/
 TestMultiLDClient/
@@ -94,6 +101,7 @@ upload-cid.sh
 # Temporary files
 *.tmp
 *.log
+# .c/.h exclusions - libiec61850_full already allowed above
 *.c
 *.h
 !static_model.h  # May be needed
@@ -123,7 +131,8 @@ nul
 libiec61850-win64.zip
 
 # Misc
-server_example_files/
+# server_example_files needed for libiec61850_full build
+!libiec61850_full/examples/server_example_files/
 server_multild_*.c
 vmd-filestore/
 
