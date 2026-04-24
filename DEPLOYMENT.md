@@ -1,17 +1,154 @@
-# Настройка автодеплоя на Ubuntu сервер
+# Деплой на сервер
 
-Автоматический деплой на сервер **myServer** при пуше в ветку `master`.
+## ⚠️ Важно: Локальный vs Публичный сервер
 
-## Архитектура
+**GitHub Actions НЕ работает с локальными IP адресами** (например, `192.168.1.x`).
 
-- **CI/CD:** GitHub Actions
-- **Dockerfile:** Dockerfile.final (компилирует libiec61850 в контейнере)
-- **API:** FullApi (.NET 8.0)
-- **Порты:** 8080 (Web API), 8102 (IEC-61850)
+Если ваш сервер имеет локальный IP - используйте **локальный скрипт деплоя**.
+Если у вас публичный IP или домен - можете использовать GitHub Actions.
 
-## Шаг 1: Подготовка сервера myServer
+---
 
-Подключитесь к серверу и выполните:
+## Локальный деплой (для локальных IP)
+
+### Автоматический деплой с локальной машины
+
+#### Вариант 1: PowerShell (Windows)
+
+```powershell
+# Настройте переменные (опционально)
+$env:SERVER_HOST="192.168.1.10"
+$env:SERVER_USER="root"
+$env:SERVER_PORT="22"
+
+# Запустите деплой
+.\deploy-to-server.ps1
+```
+
+#### Вариант 2: Bash (Linux/Mac/WSL)
+
+```bash
+# Сделайте скрипт исполняемым
+chmod +x deploy-to-server.sh
+
+# Настройте переменные (опционально)
+export SERVER_HOST=192.168.1.10
+export SERVER_USER=root
+export SERVER_PORT=22
+
+# Запустите деплой
+./deploy-to-server.sh
+```
+
+### Конфигурация локального деплоя
+
+| Переменная | По умолчанию | Описание |
+|------------|--------------|----------|
+| `SERVER_HOST` | `192.168.1.10` | IP адрес сервера |
+| `SERVER_USER` | `root` | Пользователь на сервере |
+| `SERVER_PORT` | `22` | SSH порт |
+
+### Что делает локальный скрипт:
+
+1. ✅ Компилирует приложение (.NET)
+2. ✅ Собирает Docker образ
+3. ✅ Копирует образ на сервер через SCP
+4. ✅ Останавливает старый контейнер
+5. ✅ Запускает новый контейнер
+6. ✅ Проверяет здоровье сервиса
+
+### Ручной деплой (если автоматический не работает)
+
+#### На локальной машине:
+
+```bash
+# 1. Соберите приложение
+dotnet publish FullApi/FullApi.csproj -c Release -o publish-full
+
+# 2. Соберите Docker образ
+docker build --no-cache -f Dockerfile.final -t iec61850-server:latest .
+
+# 3. Сохраните образ
+docker save iec61850-server:latest | gzip > iec61850-server.tar.gz
+
+# 4. Скопируйте на сервер
+scp -P 22 iec61850-server.tar.gz root@192.168.1.10:/tmp/
+```
+
+#### На сервере:
+
+```bash
+# 5. Загрузите образ
+docker load < /tmp/iec61850-server.tar.gz
+
+# 6. Остановите старый контейнер
+docker stop iec61850-server 2>/dev/null || true
+docker rm iec61850-server 2>/dev/null || true
+
+# 7. Запустите новый контейнер
+docker run -d \
+  --name iec61850-server \
+  --restart unless-stopped \
+  -p 8080:80 \
+  -p 8102:8102 \
+  -v iec61850-filestore:/app/libiec61850_full/build/examples/server_example_files/vmd-filestore \
+  iec61850-server:latest
+
+# 8. Очистите временный файл
+rm /tmp/iec61850-server.tar.gz
+
+# 9. Проверьте статус
+docker ps | grep iec61850-server
+```
+
+---
+
+## Деплой через GitHub Actions (для публичных IP)
+
+> **Используйте этот метод только если у сервера публичный IP адрес!**
+
+### Шаг 1: Подготовка сервера
+
+```bash
+# Установите Docker
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+
+# Добавьте пользователя в группу docker
+sudo usermod -aG docker $USER
+
+# Создайте директорию для приложения
+sudo mkdir -p /opt/iec61850-server
+```
+
+### Шаг 2: Настройка GitHub Secrets
+
+Откройте: **Settings → Secrets and variables → Actions → New repository secret**
+
+Добавьте секреты:
+
+| Имя | Значение | Описание |
+|-----|----------|----------|
+| `SERVER_HOST` | `ваш_домен.com` или `1.2.3.4` | Публичный IP или домен сервера |
+| `SERVER_USER` | `root` или `ubuntu` | Пользователь на сервере |
+| `SERVER_PASSWORD` | `ваш_пароль` | Пароль пользователя (или SSH ключ) |
+| `SSH_PORT` | `22` | Порт SSH |
+
+### Шаг 3: Деплой
+
+```bash
+git add .
+git commit -m "Deploy"
+git push origin master
+```
+
+Следите за выполнением во вкладке **Actions** на GitHub.
+
+---
+
+## Подготовка сервера (любой метод)
+
+На сервере выполните:
 
 ```bash
 # Обновите систему
@@ -22,82 +159,30 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 
 # Добавьте пользователя в группу docker
-sudo usermod -aG docker artem
-
-# Установите Docker Compose
-sudo apt install docker-compose-plugin -y
+sudo usermod -aG docker $USER
 
 # Примените изменения группы (выйдите и войдите снова)
 newgrp docker
 
 # Создайте директорию для приложения
 sudo mkdir -p /opt/iec61850-server
-sudo chown artem:artem /opt/iec61850-server
+
+# Откройте порты в firewall (если нужен)
+sudo ufw allow 22/tcp    # SSH
+sudo ufw allow 8080/tcp  # Web API
+sudo ufw allow 8102/tcp  # IEC-61850 TCP
+sudo ufw allow 8102/udp  # IEC-61850 UDP
+sudo ufw enable
 ```
 
-## Шаг 2: Настройка SSH ключей
-
-### На Windows (вашей локальной машине):
-
-```powershell
-# В PowerShell
-ssh-keygen -t ed25519 -C "github-deploy" -f ~/.ssh/github_deploy_key
-```
-
-### Скопируйте публичный ключ на сервер:
-
-```powershell
-type $env:USERPROFILE\.ssh\github_deploy_key.pub | ssh artem@myServer "cat >> ~/.ssh/authorized_keys"
-```
-
-### Проверьте подключение:
-
-```powershell
-ssh -i ~/.ssh/github_deploy_key artem@myServer "docker --version"
-```
-
-## Шаг 3: Настройка GitHub Secrets
-
-Откройте ваш репозиторий на GitHub: **Settings → Secrets and variables → Actions → New repository secret**
-
-Добавьте секреты:
-
-| Имя | Значение | Описание |
-|-----|----------|----------|
-| `SSH_PRIVATE_KEY` | (приватный ключ) | Содержимое файла `github_deploy_key` (БЕЗ .pub) |
-| `SSH_PORT` | `22` | Порт SSH (или ваш кастомный) |
-| `SERVER_HOST` | `myServer` | IP или hostname сервера |
-| `SERVER_USER` | `artem` | Имя пользователя на сервере |
-
-### Как добавить SSH_PRIVATE_KEY:
-
-1. Откройте файл `C:\Users\<ваш_пользователь>\.ssh\github_deploy_key` (без .pub!)
-2. Скопируйте **ВСЁ** содержимое включая строки `-----BEGIN` и `-----END`
-3. Вставьте в поле значения секрета в GitHub
-
-## Шаг 4: Деплой
-
-### Запушьте код в GitHub:
-
-```bash
-git add .
-git commit -m "Setup auto-deployment"
-git push origin master
-```
-
-### Следите за выполнением:
-
-1. Откройте репозиторий на GitHub
-2. Перейдите во вкладку **Actions**
-3. Выберите последний workflow "Deploy to Ubuntu Server"
-4. Следите за логами выполнения
+---
 
 ## Проверка деплоя
 
-### На сервере:
+### Проверьте работу контейнера:
 
 ```bash
-ssh artem@myServer
+# На сервере
 docker ps                    # Проверьте что контейнер запущен
 docker logs iec61850-server  # Посмотрите логи
 ```
@@ -106,82 +191,117 @@ docker logs iec61850-server  # Посмотрите логи
 
 ```bash
 # Health check
-curl http://myServer:8080/health
+curl http://192.168.1.10:8080/health
 
-# Список устройств
-curl http://myServer:8080/api/devices
+# Статус сервера
+curl http://192.168.1.10:8080/api/server/status
 
 # Swagger UI
-# Откройте в браузере: http://myServer:8080/swagger
+# Откройте в браузере: http://192.168.1.10:8080/swagger
 ```
+
+---
 
 ## Решение проблем
 
 ### Permission denied (publickey)
-- Убедитесь, что публичный ключ добавлен в `~/.ssh/authorized_keys` на сервере
-- Проверьте права: `chmod 600 ~/.ssh/github_deploy_key`
+
+**Решение 1:** Используйте пароль вместо SSH ключа
+
+Создайте файл `~/.ssh/config`:
+```
+Host 192.168.1.10
+    User root
+    PreferredAuthentications password
+```
+
+**Решение 2:** Добавьте SSH ключ на сервер
+
+```bash
+# На локальной машине
+cat ~/.ssh/id_rsa.pub | ssh root@192.168.1.10 "cat >> ~/.ssh/authorized_keys"
+```
+
+### Connection refused
+
+**Решение:** Проверьте, что SSH сервер работает:
+```bash
+# На сервере
+sudo systemctl status ssh
+sudo systemctl start ssh
+```
+
+### Docker command not found
+
+**Решение:** Установите Docker:
+```bash
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
 
 ### Port 8080/8102 already in use
+
 ```bash
-sudo lsof -i :8080  # Найдите процесс
-# Или измените порты в .github/workflows/deploy.yml
+# Найдите процесс
+sudo lsof -i :8080
+
+# Или остановите конфликтующий контейнер
+docker stop <container_name>
 ```
 
 ### Container not starting
+
 ```bash
 docker logs iec61850-server  # Посмотрите логи
 docker ps -a                 # Проверьте статус
 ```
 
-### Docker command not found
-```bash
-# Убедитесь что пользователь в группе docker
-groups artem
-# Перезайдите в систему после добавления в группу
-```
+---
 
-## Управление
+## Управление сервисом
 
 ### Просмотр логов:
 ```bash
-ssh artem@myServer "docker logs -f iec61850-server"
+ssh root@192.168.1.10 "docker logs -f iec61850-server"
 ```
 
 ### Перезапуск:
 ```bash
-ssh artem@myServer "docker restart iec61850-server"
+ssh root@192.168.1.10 "docker restart iec61850-server"
 ```
 
 ### Остановка:
 ```bash
-ssh artem@myServer "docker stop iec61850-server"
+ssh root@192.168.1.10 "docker stop iec61850-server"
 ```
 
-### Обновление вручную:
+### Удаление:
 ```bash
-ssh artem@myServer
-cd /opt/iec61850-server
-# Github Actions автоматически задеплоит новую версию при следующем пуше
+ssh root@192.168.1.10 "docker rm -f iec61850-server"
 ```
 
-## Firewall (если нужен)
+---
 
-```bash
-sudo ufw allow 22/tcp    # SSH
-sudo ufw allow 8080/tcp  # Web API
-sudo ufw allow 8102/tcp  # IEC-61850 TCP
-sudo ufw allow 8102/udp  # IEC-61850 UDP
-sudo ufw enable
-```
+## Доступ к сервису
+
+После успешного деплоя:
+
+- **Web API:** http://192.168.1.10:8080
+- **Swagger UI:** http://192.168.1.10:8080/swagger
+- **IEC-61850:** 192.168.1.10:8102
+
+---
 
 ## Структура на сервере
 
 ```
-myServer:/opt/iec61850-server/
+server:/opt/iec61850-server/
 └── (Docker контейнер с volume для filestore)
 ```
 
 Docker volume `iec61850-filestore` хранит загруженные файлы.
+
+---
 
 ## Дополнительная информация
 
