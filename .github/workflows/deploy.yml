@@ -33,58 +33,59 @@ jobs:
       - name: Save Docker image
         run: docker save $DOCKER_IMAGE:$DOCKER_TAG | gzip > iec61850-server.tar.gz
 
-      - name: Setup SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY_BASE64 }}" | base64 -d > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
 
       - name: Copy Docker image to server
         run: |
-          scp -i ~/.ssh/id_rsa -P ${{ secrets.SSH_PORT }} iec61850-server.tar.gz ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/tmp/
-
-      - name: Copy deploy script to server
-        run: |
-          cat << 'SCRIPT' | ssh -i ~/.ssh/id_rsa -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "cat > /tmp/deploy.sh"
-          #!/bin/bash
-          set -e
-
-          cd /opt/iec61850-server
-
-          # Load Docker image
-          docker load < /tmp/iec61850-server.tar.gz
-
-          # Stop old container
-          docker stop iec61850-server 2>/dev/null || true
-          docker rm iec61850-server 2>/dev/null || true
-
-          # Run new container
-          docker run -d \
-            --name iec61850-server \
-            --restart unless-stopped \
-            -p 8080:80 \
-            -p 8102:8102 \
-            -v iec61850-filestore:/app/libiec61850_full/build/examples/server_example_files/vmd-filestore \
-            $DOCKER_IMAGE:latest
-
-          # Cleanup old images
-          docker image prune -af --filter "until=24h"
-          rm /tmp/iec61850-server.tar.gz
-
-          echo "✅ Deployment successful!"
-          SCRIPT
-
-          ssh -i ~/.ssh/id_rsa -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "chmod +x /tmp/deploy.sh"
+          scp -P ${{ secrets.SSH_PORT }} iec61850-server.tar.gz ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:/tmp/
 
       - name: Deploy on server
-        run: |
-          ssh -i ~/.ssh/id_rsa -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "/tmp/deploy.sh"
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            set -e
+            cd /opt/iec61850-server
+
+            # Load Docker image
+            docker load < /tmp/iec61850-server.tar.gz
+
+            # Stop old container
+            docker stop iec61850-server 2>/dev/null || true
+            docker rm iec61850-server 2>/dev/null || true
+
+            # Run new container
+            docker run -d \
+              --name iec61850-server \
+              --restart unless-stopped \
+              -p 8080:80 \
+              -p 8102:8102 \
+              -v iec61850-filestore:/app/libiec61850_full/build/examples/server_example_files/vmd-filestore \
+              iec61850-server:latest
+
+            # Cleanup old images
+            docker image prune -af --filter "until=24h"
+            rm /tmp/iec61850-server.tar.gz
+
+            echo "✅ Deployment successful!"
 
       - name: Health check
-        run: |
-          sleep 15
-          ssh -i ~/.ssh/id_rsa -p ${{ secrets.SSH_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} << 'ENDSSH'
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
             echo "🔍 Checking container status..."
             docker ps | grep iec61850-server || exit 1
 
@@ -93,4 +94,3 @@ jobs:
             curl -f http://localhost:8080/health || exit 1
 
             echo "✅ All health checks passed!"
-          ENDSSH
