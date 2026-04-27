@@ -1,8 +1,0 @@
-is_global = true
-build_property.RootNamespace = StaticModelGenerator
-build_property.ProjectDir = F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\tools\model_generator_dotnet\StaticModelGenerator\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 
-build_property.EnableCodeStyleSeverity = 

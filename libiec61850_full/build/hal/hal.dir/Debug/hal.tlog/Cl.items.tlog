@@ -1,6 +1,0 @@
-F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\socket\win32\socket_win32.c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.dir\Debug\socket_win32.obj
-F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\thread\win32\thread_win32.c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.dir\Debug\thread_win32.obj
-F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\filesystem\win32\file_provider_win32.c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.dir\Debug\file_provider_win32.obj
-F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\time\win32\time.c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.dir\Debug\time.obj
-F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\serial\win32\serial_port_win32.c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.dir\Debug\serial_port_win32.obj
-F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\hal\memory\lib_memory.c;F:\RTSoft\Code\proxy_gate_90_2\libiec61850_full\build\hal\hal.dir\Debug\lib_memory.obj
