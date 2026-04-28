@@ -1,0 +1,18 @@
+# VMD Filestore (mounted volume)
+vmd-filestore/
+
+# Docker
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated files
+static_model.c
+static_model.h
+*.cid.backup.*
+
+# API Manager
+api-manager/__pycache__/
+api-manager/*.pyc

@@ -1,0 +1,23 @@
+# IEC 61850 Server - Runtime only (no model compilation)
+FROM debian:bookworm-slim
+
+# Install runtime dependencies
+RUN apt-get update && apt-get install -y \
+    libstdc++6 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create runtime directory
+WORKDIR /app
+
+# Server binary will be mounted as volume
+# Model files will be mounted as volume
+# Filestore will be mounted as volume
+
+# Expose IEC 61850 MMS port
+EXPOSE 102/tcp
+
+# Set the entrypoint
+ENTRYPOINT ["/app/server_example_files"]
+
+# Run on port 102 by default
+CMD ["102"]

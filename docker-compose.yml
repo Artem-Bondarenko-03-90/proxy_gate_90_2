@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  iec61850-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.runtime
+    container_name: iec61850-fileserver
+    ports:
+      - "102:102/tcp"
+    volumes:
+      # Mount server binary (compiled separately)
+      - ./server_example_files:/app/server_example_files:ro
+      # Mount model files
+      - ./static_model.c:/app/static_model.c:ro
+      - ./static_model.h:/app/static_model.h:ro
+      # Mount filestore directory for persistent file storage
+      - ./vmd-filestore:/app/vmd-filestore
+    restart: unless-stopped
+    networks:
+      - iec61850-net
+
+  api-manager:
+    build:
+      context: ./api-manager
+      dockerfile: Dockerfile
+    container_name: iec61850-api-manager
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount Docker socket for container management
+      - /var/run/docker.sock:/var/run/docker.sock
+      # Mount project directory for CID/model access
+      - .:/work
+      # Mount app.py for live code updates
+      - ./api-manager/app.py:/app/app.py
+      - ./api-manager/cid_manager.py:/app/cid_manager.py
+      - ./api-manager/device_registry.py:/app/device_registry.py
+    working_dir: /app
+    depends_on:
+      - iec61850-server
+    restart: unless-stopped
+    networks:
+      - iec61850-net
+
+networks:
+  iec61850-net:
+    driver: bridge

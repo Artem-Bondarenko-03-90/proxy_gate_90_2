@@ -1,0 +1,33 @@
+{
+  "mappings": {
+    "c402e4ec-d636-4661-9ece-305c59946fb9": {
+      "device_cim_id": "c402e4ec-d636-4661-9ece-305c59946fb9",
+      "ld_name": "DeviceTest001",
+      "storage_path": "/work/vmd-filestore/Test-Device-Lab",
+      "friendly_name": "Test-Device-Lab",
+      "created_at": "2026-04-28T20:16:21.930482"
+    },
+    "e7e19427-96ca-4315-9b82-11c666cb5f75": {
+      "device_cim_id": "e7e19427-96ca-4315-9b82-11c666cb5f75",
+      "ld_name": "GenericIO21",
+      "storage_path": "/work/vmd-filestore/GenericIO21",
+      "friendly_name": "GenericIO21",
+      "created_at": "2026-04-28T20:21:17.558257"
+    },
+    "34dd1ed1-163c-4233-bc5c-dbffd161ccd9": {
+      "device_cim_id": "34dd1ed1-163c-4233-bc5c-dbffd161ccd9",
+      "ld_name": "GenericIO",
+      "storage_path": "/work/vmd-filestore/GenericIO",
+      "friendly_name": "GenericIO",
+      "created_at": "2025-04-28T20:00:00.000000"
+    },
+    "f63ed770-6f1a-41dc-a81d-e51b29fed614": {
+      "device_cim_id": "f63ed770-6f1a-41dc-a81d-e51b29fed614",
+      "ld_name": "GenericIO2",
+      "storage_path": "/work/vmd-filestore/GenericIO2",
+      "friendly_name": "GenericIO2",
+      "created_at": "2025-04-28T20:00:00.000000"
+    }
+  },
+  "version": 1
+}
